@@ -1,0 +1,13 @@
+
+
+<table>
+    
+    <tr *ngFor="let book of bookList"  (click)="handleClick(book)">
+       <td>{{ book.bookId }}</td>
+       <td>{{ book.bookTitle }}</td>
+      
+    </tr>
+</table>
+
+<app-book [isRegisteredFromParent]="isRegistered" [book]="selectedBook "></app-book>
+

@@ -1,0 +1,11 @@
+<p>book-master works!</p>
+<table>
+    
+    <tr *ngFor="let book of bookList"  (click)="handleClick(book)">
+       <td>{{ book.bookId }}</td>
+       <td>{{ book.bookTitle }}</td>
+      
+    </tr>
+</table>
+
+<app-book-detail [isRegisteredFromParent]="isRegistered" [book1]="selectedBook "></app-book-detail>

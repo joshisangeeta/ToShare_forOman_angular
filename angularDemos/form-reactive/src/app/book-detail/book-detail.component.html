@@ -1,0 +1,17 @@
+<p>book-detail works!</p>
+  <h1>Reactive Form Demo</h1>
+  <form [formGroup]='bookForm' novalidate >
+      <div class='form-group'>
+          <label class="center-block">Title
+              <input class='form-control' formControlName="title">
+          </label>
+      </div>
+      <div [hidden]="bookForm.controls.title.valid || bookForm.controls.title.pristine">
+              It should not be blanck &/Or Min length should be 5 char
+    </div>
+
+    Form Value
+  {{bookForm.controls.title?.value}}
+  </form>
+
+  
